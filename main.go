@@ -46,8 +46,14 @@ func main() {
 			return err
 		}
 
+		// Assets are in ui/dist/assets
+		assetsSub, err := fs.Sub(uiDist, "ui/dist/assets")
+		if err != nil {
+			return err
+		}
+
 		// Register static file server for the assets
-		e.Router.GET("/assets/{path...}", apis.Static(sub, false))
+		e.Router.GET("/assets/{path...}", apis.Static(assetsSub, false))
 
 		// Use a middleware to handle SPA fallback for non-existent routes
 		e.Router.BindFunc(func(c *core.RequestEvent) error {
