@@ -11,3 +11,8 @@ offtrack.exe
 # Go
 vendor/
 *.log
+
+# Frontend
+ui/node_modules/
+ui/dist/
+ui/.vite/
