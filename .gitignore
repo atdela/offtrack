@@ -1,0 +1,13 @@
+# PocketBase data
+pb_data/
+
+# Binaries
+offtrack
+offtrack.exe
+
+# OS files
+.DS_Store
+
+# Go
+vendor/
+*.log
